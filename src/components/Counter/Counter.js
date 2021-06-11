@@ -7,7 +7,7 @@ export function Counter() {
   const dispatch = useDispatch()
 
   return (
-    <div>
+    <div className="flex justify-around">
       <div>
         <button
           aria-label="Increment value"

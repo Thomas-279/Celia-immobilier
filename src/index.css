@@ -3,5 +3,20 @@
 @tailwind utilities;
 
 .btn-blue {
-  @apply bg-blue-700 text-white px-5 py-3 font-bold rounded;
+  @apply bg-myDark text-myWhite px-5 py-3 font-bold;
 }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* palette couleurs Keller Williams 
+Rouge hover ( plus clair ) : #CC0202
+Rouge foncé : #B40403
+Noir : #000000
+Blanc : #FFFFFF
+Gris clair : #F6F9FA
+Gris moins clair : #EFEFEF
+
+
+*/
