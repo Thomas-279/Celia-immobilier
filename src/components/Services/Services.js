@@ -4,18 +4,13 @@ export function Services() {
     // le container
     <div className="w-full flex flex-col">
     {/* element 1 */}
-        <div className="w-full h-96 bg-myLightGrey">
-            <div className="flex space-x-3">
-                <p>les services</p>
-            </div>
-        </div>
-    {/* element 2 */}
-        <div className="w-full h-96 bg-myLessLightGrey">
-            <div className="flex space-x-3">
-                <p className="">ici sous container 2</p>
+        <div className="flex justify-center items-center h-full w-full">
+            <div className="w-11/12 h-96 bg-myLightGrey p-5 m-2">
+                <div className="flex space-x-3">
+                    <p>services</p>
+                </div>
             </div>
         </div>
     </div>
-
     );
 }
