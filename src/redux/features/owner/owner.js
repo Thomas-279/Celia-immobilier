@@ -4,10 +4,14 @@ export const owner = createSlice({
     name: 'owner',
     initialState: {
         name: 'Célia DREUX',
+        visibility: false,
         },
+        reducers: {
+            setVisibility: (state, action) => { state.visibility = action.payload },
+        }
 })
 
 // Action creators are generated for each case reducer function
-// export const { increment, decrement } = owner.actions
+export const { setVisibility } = owner.actions
 
 export default owner.reducer
