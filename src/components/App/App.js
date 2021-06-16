@@ -21,7 +21,7 @@ function App() {
     dispatch(setAdsData());
   }, []);
   return (
-  <div className="w-full">
+  <div className="w-full h-full">
     <Header />
     <Switch >
       <Route exact path='/' component={Home} />
