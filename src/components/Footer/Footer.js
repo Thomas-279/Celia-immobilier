@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setVisibility } from '../../redux/features/owner/owner'
 
+import bareme from '../../assets/BaremeKWTrianon.pdf'
+
 
 export function Footer() {
   const visible = useSelector((state) => state.owner.visibility)
@@ -25,17 +27,16 @@ export function Footer() {
   }
   window.addEventListener('scroll', toggleVisible);
   return (
-    <div className="w-full flex justify-center flex-col lg:flex-row bg-myDark box-border h-5 p-1 text-myWhite fixed bottom-0 space-x-3">
-      <div>
-        <p className="text-xs">Agent commercial en immobilier Keller Williams Trianon</p>
+    <div className="w-full flex justify-center bg-myDark box-border h-5 p-1 text-myWhite bottom-0 space-x-3">
+      <div className="w-6/12 flex justify-around">
+        <a href="https://www.trianon.kwimmo.fr/annonces/agent/711458-celia-dreux.html" target="_blank" rel="noreferrer"><p className="text-xs">Agent commercial en immobilier Keller Williams Trianon</p></a>
         <p className="text-xs">-</p>
         <p className="text-xs">RSAC : 123456789 Versailles</p>
         <p className="text-xs">-</p>
-        <p className="text-xs">Barème honoraires</p>
+        <p className="text-xs"><a href={bareme} target="_blank" rel="noreferrer">Barème Honoraires KW Trianon</a></p>
       </div>
       <div className="fixed right-4 bottom-0">
           <button
-
             onClick={scrollToTop}
             style={{ display: visible ? 'inline' : 'none' }}
             name="Back to top"

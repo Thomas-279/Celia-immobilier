@@ -12,6 +12,7 @@ export default [
     size: '5 pièces, 120m2',
     price: '3 250 000 €',
     status: 'A vendre',
+    sold: false,
     description: 'Ici c est une super maison',
     exclu: true,
     pics: {
@@ -28,6 +29,7 @@ export default [
     size: '3 pièces, 80m2',
     price: '551 000 €',
     status: 'Vendu',
+    sold: true,
     description: 'Ici c est une super maison',
     exclu: false,
     pics: {
@@ -44,6 +46,7 @@ export default [
     size: '6 pièces, grand jardin 120m2',
     price: '251 000 €',
     status: 'A vendre',
+    sold: false,
     description: 'Ici c est une super maison',
     exclu: true,
     pics: {
