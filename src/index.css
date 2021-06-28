@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-blue {
-  @apply bg-myDark text-myWhite px-5 py-3 font-bold;
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: black;

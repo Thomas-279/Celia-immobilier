@@ -7,6 +7,8 @@ import map from '../../assets/images/logo/tests/map.png'
 import test1 from '../../assets/images/images/test1.jpg'
 import test2 from '../../assets/images/images/test2.png'
 
+
+
 export function Home() {
     const name = useSelector((state) => state.owner.name)
     const job = useSelector((state) => state.owner.job)
@@ -15,70 +17,76 @@ export function Home() {
 
     return (
     // le container
-    <div className="w-full flex flex-col items-center bg-myLightGrey p-10">
+    <main className="w-full flex flex-col items-center bg-myLightGrey p-1 md:p-10 test1">
     {/* element 1 */}
-        <div className="flex justify-center items-center h-full w-11/12">
-            <div className="w-full h-96 bg-myWhite p-5 m-5 shadow-xl border border-myLightRed">
+        <div className="flex justify-center items-center h-full w-full md:w-11/12 test">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
-                    <div className="flex flex-col w-1/2 m-4">
-                        <div className="h-4/6 w-full px-8">
-                            <p className="text-myLightRed text-5xl tracking-wide uppercase text-center border-b border-myLightRed leading-normal">{name}</p>
-                            <p className="text-center mb-4 uppercase text-xl my-2">{job}</p>
+                    <div className="flex flex-col justify-around w-1/2 m-auto">
+                        <div className="h-4/6 w-full py-4 md:px-8">
+                            <h1 className="text-myLightRed tracking-wide uppercase text-center border-b border-myLightRed leading-normal text-xl md:text-3xl lg:text-4xl xl:text-5xl">{name}</h1>
+                            <p className="text-center mb-4 uppercase my-2 text-sm md:text-base lg:text-lg">{job}</p>
                         </div>
                         <div className="flex justify-center my-6">
-                            <img src={logo} alt={logo} className="h-20" />
+                            <img src={logo} alt={logo} className="h-12 md:h-20 object-contain md:object-scale-down" />
                         </div>
-                        <p className="text-center text-2xl px-8 py-1 hover:underline"><a href={"mailto:" + mail}>{mail}</a></p>
-                        <p className="text-center text-2xl px-8 py-1 hover:underline"><a href={"tel:" + phonenumber} >{phonenumber}</a></p>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 md:py-1 hover:underline"><a href={"mailto:" + mail}>{mail}</a></p>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 md:py-1 hover:underline"><a href={"tel:" + phonenumber} >{phonenumber}</a></p>
                     </div>
-                    <div className="w-1/2 h-full flex  bg-myWhite">
+                    <div className="w-1/2 h-full flex bg-myWhite">
                         <div className="w-full h-full flex justify-center">
-                            <img src={Owner} alt={Owner} className="border border-myDark" />
+                            <img src={Owner} alt={Owner} className="w-3/4 md:w-full object-contain md:object-scale-down" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    {/* element 2 */}
-    <div className="flex justify-center items-center h-full w-11/12">
-            <div className="w-full h-96 bg-myWhite p-5 m-5 shadow-xl border border-myLightRed">
+        {/* element 2 */}
+        <div className="flex justify-center items-center h-full w-full md:w-11/12">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
                     <div className="w-1/2 h-full flex bg-myWhite">
                         <div className="w-full h-full flex justify-center">
-                            <img src={test1} alt={test2} />
+                            <img src={test1} alt={test2} className="w-3/4 md:w-full object-contain md:object-scale-down" />
                         </div>
                     </div>
-                    <div className="flex flex-col w-1/2 m-4">
-                        <div className="flex flex-col h-full w-full px-8">
-                            <h2 className="text-myLightRed text-3xl h-1/2 text-center mb-4 uppercase border-b border-myLightRed leading-normal">Services : </h2>
-                            <p className="h-1/2 text-xl text-left"># Estimation gratuite de votre bien</p>
-                            <p className="h-1/2 text-xl text-left"># Photographie - Mise en valeur</p>
-                            <p className="h-1/2 text-xl text-left"># Visite virtuelle / rendu 3D</p>
-                            <p className="h-1/2 text-xl text-left"># Commercialisation sur réseaux</p>
+                    <div className="flex flex-col justify-around w-1/2 m-auto">
+                        <div className="h-4/6 w-full py-4 md:px-8">
+                            <h2 className="text-myLightRed tracking-wide uppercase text-center border-b border-myLightRed leading-normal text-xl md:text-3xl lg:text-4xl xl:text-5xl">Services</h2>
+                        </div>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1"># Estimation gratuite de votre bien</p>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1"># Photographie - Mise en valeur</p>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1"># Visite virtuelle / rendu 3D</p>
+                        <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1"># Commercialisation sur réseaux</p>
+                    </div>
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    {/* element 3 */}
-        <div className="flex justify-center items-center h-full w-11/12">
-            <div className="w-full h-96 bg-myWhite p-5 m-5 shadow-xl border border-myLightRed">
+        {/* element 3 */}
+        <div className="flex justify-center items-center h-full w-full md:w-11/12">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
-                    <div className="flex flex-col w-1/2 m-4">
-                        <div className="flex flex-col h-full w-full px-8">
-                            <h2 className="text-myLightRed text-3xl h-1/2 text-center mb-4 uppercase border-b border-myLightRed leading-normal">Secteur d'activité</h2>
-                            <p className="h-1/2 text-left">Une large zone sur l'ensemble de l'ouest parisien, qui me permets de répondre à l'ensemble de vos besoins d'achats ou de ventes</p>
+                    <div className="flex flex-col justify-around w-1/2 m-auto">
+                        <div className="h-1/3 w-full py-4 md:px-8">
+                            <h2 className="text-myLightRed tracking-wide uppercase text-center border-b border-myLightRed leading-normal text-xl md:text-3xl lg:text-4xl xl:text-5xl">Secteur d'activité</h2>
+                        </div>
+                        <div className="h-2/3 flex w-full md:px-8">
+                            <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1">
+                                Une large zone sur l'ensemble de l'ouest parisien, qui me permets de répondre à l'ensemble de vos besoins d'achats ou de ventes
+                            </p>
                         </div>
                     </div>
-                    <div className="w-1/2 h-full flex bg-myWhite">
+                    <div className="w-1/2 h-full flex bg-myWhite m-auto">
                         <div className="w-full h-full flex justify-center">
-                            <img src={map} alt={map} />
+                            {/* <a href="https://www.google.fr/maps/place/Keller+Williams+Trianon/@48.8105978,2.1407103,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67dcd70cb2b3f:0xd8c0e9e3189b850b!8m2!3d48.8105913!4d2.1429297"> */}
+                                <img src={map} alt={map} className="object-contain md:object-scale-down" />
+                            {/* </a> */}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     );
 }

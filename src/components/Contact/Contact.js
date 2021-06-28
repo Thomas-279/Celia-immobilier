@@ -46,7 +46,7 @@ export function Contact() {
     {/* form contact 2 */}
         <div className="flex flex-col justify-center items-center h-full w-11/12">
             <h2 className="block w-full text-center text-myDark text-2xl font-bold uppercase">Contact</h2>
-            <div className="flex justify-around w-full h-96 bg-myWhite shadow-xl p-6 m-5 border border-myLightRed">
+            <div className="flex justify-around w-full bg-myWhite shadow-xl p-6 m-5 border border-myLightRed">
                 <a href="https://www.facebook.com/celiadreuxkw" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={FacebookLogo} alt={FacebookLogo} /></a>
                 <a href="https://www.instagram.com/celiadreuxkw/" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={InstagramLogo} alt={InstagramLogo} /></a>
                 <a href="https://www.linkedin.com/in/c%C3%A9lia-dreux-71358a113/" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={LinkedinLogo} alt={LinkedinLogo} /></a>
