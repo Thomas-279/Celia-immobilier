@@ -17,10 +17,10 @@ export function Home() {
 
     return (
     // le container
-    <main className="w-full flex flex-col items-center bg-myLightGrey p-1 md:p-10 test1">
+    <main className="w-full flex flex-col items-center bg-myLightGrey p-3 md:p-10">
     {/* element 1 */}
-        <div className="flex justify-center items-center h-full w-full md:w-11/12 test">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
+        <section className="flex justify-center items-center h-full w-full md:w-11/12">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
                     <div className="flex flex-col justify-around w-1/2 m-auto">
                         <div className="h-4/6 w-full py-4 md:px-8">
@@ -40,14 +40,14 @@ export function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         {/* element 2 */}
-        <div className="flex justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
+        <section className="flex justify-center items-center h-full w-full md:w-11/12">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
                     <div className="w-1/2 h-full flex bg-myWhite">
                         <div className="w-full h-full flex justify-center">
-                            <img src={test1} alt={test2} className="w-3/4 md:w-full object-contain md:object-scale-down" />
+                            <img src={test1} alt={test2} className="w-11/12 md:w-full object-contain md:object-scale-down" />
                         </div>
                     </div>
                     <div className="flex flex-col justify-around w-1/2 m-auto">
@@ -62,14 +62,14 @@ export function Home() {
 
                 </div>
             </div>
-        </div>
+        </section>
         {/* element 3 */}
-        <div className="flex justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 m-2 md:m-5 shadow-xl border border-myLightRed">
+        <section className="flex justify-center items-center h-full w-full md:w-11/12">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
                 <div className="flex w-full h-full">
                     <div className="flex flex-col justify-around w-1/2 m-auto">
                         <div className="h-1/3 w-full py-4 md:px-8">
-                            <h2 className="text-myLightRed tracking-wide uppercase text-center border-b border-myLightRed leading-normal text-xl md:text-3xl lg:text-4xl xl:text-5xl">Secteur d'activité</h2>
+                            <h2 className="text-myLightRed tracking-wide uppercase text-center border-b border-myLightRed leading-normal text-xl md:text-3xl lg:text-4xl xl:text-5xl">Secteur</h2>
                         </div>
                         <div className="h-2/3 flex w-full md:px-8">
                             <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 py-1">
@@ -80,13 +80,13 @@ export function Home() {
                     <div className="w-1/2 h-full flex bg-myWhite m-auto">
                         <div className="w-full h-full flex justify-center">
                             {/* <a href="https://www.google.fr/maps/place/Keller+Williams+Trianon/@48.8105978,2.1407103,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67dcd70cb2b3f:0xd8c0e9e3189b850b!8m2!3d48.8105913!4d2.1429297"> */}
-                                <img src={map} alt={map} className="object-contain md:object-scale-down" />
+                                <img src={map} alt={map} className="w-11/12 md:w-full object-contain md:object-scale-down" />
                             {/* </a> */}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     );
 }

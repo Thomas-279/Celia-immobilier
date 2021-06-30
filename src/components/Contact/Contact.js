@@ -42,10 +42,10 @@ export function Contact() {
         }
     return (
     // le container
-    <div className="w-full h-screen flex flex-col items-center bg-myLightGrey p-10">
-    {/* form contact 2 */}
-        <div className="flex flex-col justify-center items-center h-full w-11/12">
-            <h2 className="block w-full text-center text-myDark text-2xl font-bold uppercase">Contact</h2>
+    <main className="w-full h-screen flex flex-col items-center bg-myLightGrey p-3 md:p-10">
+    {/* form contact */}
+        <div className="flex flex-col justify-center items-center h-full w-full md:w-11/12">
+            {/* <h2 className="block w-full text-center text-myDark text-2xl font-bold uppercase">Contact</h2> */}
             <div className="flex justify-around w-full bg-myWhite shadow-xl p-6 m-5 border border-myLightRed">
                 <a href="https://www.facebook.com/celiadreuxkw" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={FacebookLogo} alt={FacebookLogo} /></a>
                 <a href="https://www.instagram.com/celiadreuxkw/" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={InstagramLogo} alt={InstagramLogo} /></a>
@@ -53,20 +53,20 @@ export function Contact() {
                 <a href={"tel:" + phonenumber}><img className="w-12 h-12" src={PhoneLogo} alt={PhoneLogo} /></a>
             </div>
             <div className="w-full bg-myWhite shadow-xl p-5 m-5 border border-myLightRed">
-                <h2 className="block w-full text-center text-myDark text-2xl font-bold mb-6">Ou transmettez-moi vos coordonnées :</h2>
-                <div className="w-1/2 flex flex-col m-auto">
+                <h2 className="block w-full text-center text-myDark text-base md:text-2xl font-bold mb-6">Ou transmettez-moi vos coordonnées :</h2>
+                <div className="w-full md:w-1/2 flex flex-col m-auto">
                     <form method="post" onSubmit={handleOnSubmit} >
                         <div className="w-full flex flex-col justify-around mb-4">
                             <div className="flex flex-col">
-                                <label className="mb-2 py-2 font-bold text-lg text-myDark" htmlFor="first_name">Votre nom :</label>
+                                <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="first_name">Votre nom :</label>
                                 <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="text" name="name" id="name" onChange={(event) => dispatch(setNameValue(event.target.value))}/>
                             </div>
                             <div className="flex flex-col">
-                                <label className="mb-2 py-2 font-bold text-lg text-myDark" htmlFor="email">Votre email :</label>
+                                <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="email">Votre email :</label>
                                 <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="email" name="email" id="email" onChange={(event) => dispatch(setMailValue(event.target.value))}/>
                             </div>
                             <div className="flex flex-col">
-                                <label className="mb-2 py-2 font-bold text-lg text-myDark" htmlFor="email">Numéro de téléphone :</label>
+                                <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="email">Numéro de téléphone :</label>
                                 <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="phone" name="phonenumber" id="phonenumber" onChange={(event) => dispatch(setPhonenumberValue(event.target.value))}/>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ export function Contact() {
 
             </div>
         </div>
-    </div>
+    </main>
 
     );
 }
