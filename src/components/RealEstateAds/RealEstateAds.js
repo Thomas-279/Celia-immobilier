@@ -14,7 +14,7 @@ export function RealEstateAds() {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setAdsData());
-    }, []);
+    });
 
     const proprietes = {
         duration: 5000,

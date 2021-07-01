@@ -19,7 +19,7 @@ function App() {
     document.title = 'Célia DREUX';
     window.scrollTo(0, 0);
     dispatch(setAdsData());
-  }, []);
+  });
   return (
   <div className="w-full h-full">
     <Header />
