@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Slide } from 'react-slideshow-image';
-import ModalImage from "react-modal-image"
 import { useSelector, useDispatch } from 'react-redux'
 import { setAdsData } from '../../redux/features/ads/ads'
 
