@@ -1,3 +1,9 @@
 .containerSlide img {
-  height: 300px;
+  height: 180px;
+}
+
+@media (min-width: 768px) {
+  .containerSlide img {
+    height: 300px;
+  }
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setVisibility } from '../../redux/features/owner/owner'
 
+import { FaArrowAltCircleUp } from 'react-icons/fa';
+
 import bareme from '../../assets/BaremeKWTrianon.pdf'
 
 
@@ -21,8 +23,6 @@ export function Footer() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-      /* you can also use 'auto' behaviour
-         in place of 'smooth' */
     });
   }
   window.addEventListener('scroll', toggleVisible);
@@ -33,12 +33,12 @@ export function Footer() {
         <p className="text-xs">RSAC : 123456789 Versailles</p>
         <p className="text-xs"><a href={bareme} target="_blank" rel="noreferrer">Barème Honoraires KW Trianon</a></p>
       </div>
-      <div className="fixed right-4 bottom-10 text-myDark">
-          <button
+      <div className="fixed right-4 bottom-10 hidden md:block text-myLightRed">
+          <FaArrowAltCircleUp
             onClick={scrollToTop}
             style={{ display: visible ? 'inline' : 'none' }}
             name="Back to top"
-          >↑</button>
+          />
       </div>
     </footer>
   )
