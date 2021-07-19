@@ -3,8 +3,8 @@ import {
   Route
 } from "react-router-dom";
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux'
-import { setAdsData } from '../../redux/features/ads/ads'
+// import { useDispatch } from 'react-redux'
+// import { setAdsData } from '../../redux/features/ads/ads'
 
 import { Header } from '../Header/Header'
 import { Home } from '../Home/Home'
@@ -14,11 +14,11 @@ import { RealEstateAds } from '../RealEstateAds/RealEstateAds'
 import { Footer } from '../Footer/Footer'
 
 function App() {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
   useEffect(() => {
     document.title = 'Célia DREUX';
     window.scrollTo(0, 0);
-    dispatch(setAdsData());
+    // dispatch(setAdsData());
   });
   return (
   <div className="w-full h-full">

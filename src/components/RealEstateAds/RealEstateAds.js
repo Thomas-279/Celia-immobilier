@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Slide } from 'react-slideshow-image';
 import { useSelector, useDispatch } from 'react-redux'
-import { setAdsData } from '../../redux/features/ads/ads'
+import { getAllAds } from '../../redux/features/ads/ads'
 
 import 'react-slideshow-image/dist/styles.css'
 import './style.css'
@@ -13,8 +13,8 @@ export function RealEstateAds() {
     const phonenumber = useSelector((state) => state.owner.phonenumber)
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(setAdsData());
-    });
+        dispatch(getAllAds());
+    }, [dispatch]);
 
     const proprietes = {
         duration: 5000,
@@ -42,26 +42,26 @@ export function RealEstateAds() {
                                 <Slide {...proprietes}>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics.pic1} alt={data.pics.pic1} />
+                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[0].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[0].name}`} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics.pic2} alt={data.pics.pic2} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[1].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[1].name}`} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics.pic3} alt={data.pics.pic3} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[2].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[2].name}`} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics.pic4} alt={data.pics.pic4} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[3].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[3].name}`} />
                                         </div>
                                     </div>
                                 </Slide>
-                                {(data.exclu ? <p className="text-center text-xs m-auto md:text-base mb:2 md:mb-4 w-5/6 text-myWhite bg-myLightRed">Exclusivité Keller Williams Trianon</p> : '')}
+                                {(data.exclusivity ? <p className="text-center text-xs m-auto md:text-base mb:2 md:mb-4 w-5/6 text-myWhite bg-myLightRed">Exclusivité Keller Williams Trianon</p> : '')}
                             </div>
                             {/* Ici test de caroussel */}
                         </div>
@@ -69,13 +69,13 @@ export function RealEstateAds() {
                     <div className="relative flex flex-col md:m-4 md:w-1/2">
                         <div className="h-4/6 w-full md:py-4 md:px-8">
                             <p className="text-myLightRed my-2 text-xl md:text-3xl lg:text-5xl tracking-wide uppercase text-center border-b border-myLightRed leading-normal">{data.status}</p>
-                            <p className="text-center mb-2 uppercase text-xs md:text-lg lg:text-2xl">{data.location}</p>
-                            <p className="text-left text-xs md:text-base">{data.type}</p>
-                            <p className="text-left text-xs md:text-base">{data.size}</p>
+                            <p className="text-center mb-2 uppercase text-xs md:text-lg lg:text-2xl">{data.home_location}</p>
+                            <p className="text-left text-xs md:text-base">{data.home_type}</p>
+                            <p className="text-left text-xs md:text-base">{data.home_size}</p>
                             <p className="text-left text-xs md:text-base">{data.description}</p> 
                         </div>
                         <div className="h-2/6 flex flex-col justify-end">
-                            <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 underline font-bold">{data.price}</p>
+                            <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 underline font-bold">{data.home_price} €</p>
                         </div>
                         <div className="absolute right-1 bottom-1">
                             <a href={"tel:" + phonenumber}><img className="w-4 h-4 md:w-6 md:h-6" src={PhoneLogo} alt={PhoneLogo} /></a>

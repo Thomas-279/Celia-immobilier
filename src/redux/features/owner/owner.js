@@ -10,6 +10,7 @@ export const owner = createSlice({
         visibility: false,
         },
         reducers: {
+            // methode pour la fleche go to top
             setVisibility: (state, action) => { state.visibility = action.payload },
         }
 })
