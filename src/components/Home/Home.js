@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import Owner from '../../assets/images/owner/portrait2.jpg'
 import logo from '../../assets/images/logo/keller2.png'
 import map from '../../assets/images/logo/tests/map.png'
-import test1 from '../../assets/images/images/test1.jpg'
 import test2 from '../../assets/images/images/test2.png'
 
 
