@@ -19,7 +19,7 @@ export function Home() {
     <main className="w-full flex flex-col items-center bg-myLightGrey p-3 md:p-10">
     {/* element 1 */}
         <section className="flex justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl rounded-2xl">
                 <div className="flex w-full h-full">
                     <div className="flex flex-col justify-around w-1/2 m-auto">
                         <div className="h-4/6 w-full py-4 md:px-8">
@@ -42,7 +42,7 @@ export function Home() {
         </section>
         {/* element 2 */}
         <section className="flex justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl rounded-2xl">
                 <div className="flex w-full h-full">
                     <div className="w-1/2 h-full flex bg-myWhite">
                         <div className="w-full h-full flex justify-center">
@@ -64,7 +64,7 @@ export function Home() {
         </section>
         {/* element 3 */}
         <section className="flex justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl border border-myLightRed">
+            <div className="w-full h-72 md:h-96 bg-myWhite p-2 md:p-5 my-2 md:m-5 shadow-xl rounded-2xl">
                 <div className="flex w-full h-full">
                     <div className="flex flex-col justify-around w-1/2 m-auto">
                         <div className="h-1/3 w-full py-4 md:px-8">

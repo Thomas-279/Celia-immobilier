@@ -27,7 +27,7 @@ export function Footer() {
   }
   window.addEventListener('scroll', toggleVisible);
   return (
-    <footer className="w-full flex justify-center bg-myDark box-border p-1 text-myWhite bottom-0 space-x-3">
+    <footer className="w-full flex justify-center bg-myWhite box-border p-1 text-myLightRed bottom-0 space-x-3">
       <div className="w-11/12 flex flex-col items-center md:flex-row md:justify-between">
         <a href="https://www.trianon.kwimmo.fr/annonces/agent/711458-celia-dreux.html" target="_blank" rel="noreferrer"><p className="text-xs">Agent commercial en immobilier Keller Williams Trianon</p></a>
         <p className="text-xs">RSAC : 123456789 Versailles</p>

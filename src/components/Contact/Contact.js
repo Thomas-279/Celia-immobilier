@@ -45,8 +45,8 @@ export function Contact() {
     <main className="w-full h-screen flex flex-col items-center bg-myLightGrey p-3 md:p-16">
         {/* element 1 contact/social */}
         <section className="flex flex-col justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full bg-myWhite shadow-xl p-2 md:p-5 my-2 md:m-5 border border-myLightRed">
-            <h2 className="block w-full text-center text-myDark text-base md:text-xl font-bold mb-6">Vous pouvez me contacter via les liens suivants :</h2>
+            <div className="w-full bg-myWhite shadow-xl p-2 md:p-5 my-2 md:m-5 rounded-2xl">
+            <h2 className="block w-full text-center text-myDark text-base md:text-xl font-bold mb-6">Me contacter :</h2>
                 <div className="flex justify-around w-full h-full">
                     <a href="https://www.facebook.com/celiadreuxkw" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={FacebookLogo} alt={FacebookLogo} /></a>
                     <a href="https://www.instagram.com/celiadreuxkw/" target="_blank" rel="noreferrer"><img className="w-12 h-12" src={InstagramLogo} alt={InstagramLogo} /></a>
@@ -57,8 +57,7 @@ export function Contact() {
         </section>
         {/* element 2 form contact */}
         <section className="flex flex-col justify-center items-center h-full w-full md:w-11/12">
-            <div className="w-full bg-myWhite shadow-xl p-2 md:p-5 my-2 md:m-5 border border-myLightRed">
-                <h2 className="block w-full text-center text-myDark text-base md:text-xl font-bold mb-6">ou me faire parvenir vos coordonnées :</h2>
+            <div className="w-full bg-myWhite shadow-xl p-2 md:p-5 my-2 md:m-5 rounded-2xl">
                 <div className="w-full md:w-1/2 flex flex-col m-auto">
                     <form method="post" onSubmit={handleOnSubmit} >
                         <div className="w-full flex flex-col justify-around mb-4">
