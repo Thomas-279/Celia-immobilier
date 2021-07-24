@@ -35,29 +35,27 @@ export function RealEstateAds() {
                 <div className="flex flex-col md:flex-row w-full h-full">
                     <div className={"md:w-1/2 flex " + (data.sold ? ' bg-myLessLightGrey' : 'bg-myWhite')}>
                         <div className="w-full flex justify-center">
-                            {/* une seule image */}
-                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics.pic1} alt={data.pics.pic1} /> */}
                             {/* Ici test de caroussel */}                        
                             <div className="containerSlide w-72 md:w-96">
                                 <Slide {...proprietes}>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} />
+                                            {/* <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} /> */}
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[1].url} alt={data.pics[1].url} />
+                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[1].url} alt={data.pics[1].url} /> */}
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[2].url} alt={data.pics[2].url} />
+                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[2].url} alt={data.pics[2].url} /> */}
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} />
+                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} /> */}
                                         </div>
                                     </div>
                                 </Slide>
