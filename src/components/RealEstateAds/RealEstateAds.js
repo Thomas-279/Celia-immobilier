@@ -40,22 +40,22 @@ export function RealEstateAds() {
                                 <Slide {...proprietes}>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            {/* <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} /> */}
+                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[1].url} alt={data.pics[1].url} /> */}
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[1].url} alt={data.pics[1].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[2].url} alt={data.pics[2].url} /> */}
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[2].url} alt={data.pics[2].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            {/* <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} /> */}
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} />
                                         </div>
                                     </div>
                                 </Slide>
