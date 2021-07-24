@@ -47,7 +47,7 @@ export function Home() {
                 <div className="flex w-full h-full">
                     <div className="w-1/2 h-full flex bg-myWhite">
                         <div className="w-full h-full flex justify-center">
-                            <img src={test1} alt={test2} className="w-11/12 md:w-full object-contain md:object-scale-down" />
+                            <img src={test2} alt={test2} className="w-11/12 md:w-full object-contain md:object-scale-down" />
                         </div>
                     </div>
                     <div className="flex flex-col justify-around w-1/2 m-auto">

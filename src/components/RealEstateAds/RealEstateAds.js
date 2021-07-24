@@ -42,22 +42,22 @@ export function RealEstateAds() {
                                 <Slide {...proprietes}>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[0].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[0].name}`} />
+                                            <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[1].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[1].name}`} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[1].url} alt={data.pics[1].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[2].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[2].name}`} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[2].url} alt={data.pics[2].url} />
                                         </div>
                                     </div>
                                     <div className="each-slide">
                                         <div className="flex justify-center">
-                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={`https://celia-immobilier.herokuapp.com${data.pics[3].url}`} alt={`https://celia-immobilier.herokuapp.com${data.pics[3].name}`} />
+                                            <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} />
                                         </div>
                                     </div>
                                 </Slide>
