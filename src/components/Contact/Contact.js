@@ -5,11 +5,6 @@ import Swal from 'sweetalert2'
 import emailjs from 'emailjs-com';
 import emailjsApiKeys from '../../apiKeys/emailjsApiKeys';
 
-// import FacebookLogo from '../../assets/images/logo/social/facebook.png'
-// import InstagramLogo from '../../assets/images/logo/social/instagram.png'
-// import LinkedinLogo from '../../assets/images/logo/social/linkedin.png'
-// import PhoneLogo from '../../assets/images/logo/social/phone.png'
-
 import { ImFacebook, ImLinkedin2, ImPhone } from 'react-icons/im';
 import { FiInstagram, FiMail } from 'react-icons/fi'
 
@@ -56,15 +51,15 @@ export function Contact() {
                         <div className="w-full flex flex-col justify-around mb-4">
                             <div className="flex flex-col">
                                 <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="first_name">Votre nom :</label>
-                                <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="text" name="name" id="name" onChange={(event) => dispatch(setNameValue(event.target.value))} required/>
+                                <input className="border border-dotted py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="text" name="name" id="name" onChange={(event) => dispatch(setNameValue(event.target.value))} required/>
                             </div>
                             <div className="flex flex-col">
                                 <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="email">Votre email :</label>
-                                <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="email" name="email" id="email" onChange={(event) => dispatch(setMailValue(event.target.value))} required />
+                                <input className="border border-dotted py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="email" name="email" id="email" onChange={(event) => dispatch(setMailValue(event.target.value))} required />
                             </div>
                             <div className="flex flex-col">
                                 <label className="mb-2 py-2 font-bold text-base md:text-lg text-myDark" htmlFor="email">Numéro de téléphone :</label>
-                                <input className="border py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="phone" name="phonenumber" id="phonenumber" onChange={(event) => dispatch(setPhonenumberValue(event.target.value))} required/>
+                                <input className="border border-dotted py-2 px-3 text-myDark focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent" type="phone" name="phonenumber" id="phonenumber" onChange={(event) => dispatch(setPhonenumberValue(event.target.value))} required/>
                             </div>
                         </div>
                         <button className="block font-bold text-myDark border-transparent hover:text-myLightRed focus:outline-none focus:ring-1 focus:ring-myLightRed focus:border-transparent uppercase text-lg mx-auto" type="submit">Envoyer</button>
@@ -78,19 +73,15 @@ export function Contact() {
             <h2 className="block w-full text-center text-myLightRed text-base md:text-xl font-bold mb-6">Autres contacts :</h2>
                 <div className="flex justify-around w-full h-full">
                     <a href="https://www.facebook.com/celiadreuxkw" target="_blank" rel="noreferrer">
-                        {/* <img className="w-12 h-12" src={FacebookLogo} alt={FacebookLogo} /> */}
                         <ImFacebook className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
                     </a>
                     <a href="https://www.instagram.com/celiadreuxkw/" target="_blank" rel="noreferrer">
-                        {/* <img className="w-12 h-12" src={InstagramLogo} alt={InstagramLogo} /> */}
                         <FiInstagram className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
                     </a>
                     <a href="https://www.linkedin.com/in/c%C3%A9lia-dreux-71358a113/" target="_blank" rel="noreferrer">
-                        {/* <img className="w-12 h-12" src={LinkedinLogo} alt={LinkedinLogo} /> */}
                         <ImLinkedin2 className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
                     </a>
                     <a href={"tel:" + phonenumber}>
-                        {/* <img className="w-12 h-12" src={PhoneLogo} alt={PhoneLogo} /> */}
                         <ImPhone className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
                     </a>
                     <a href={"mailto:" + mail}>

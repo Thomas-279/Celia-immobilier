@@ -3,11 +3,9 @@ import { Slide } from 'react-slideshow-image';
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllAds } from '../../redux/features/ads/ads'
 
-import { ImSpinner6 } from 'react-icons/im';
+import { ImSpinner6, ImPhone } from 'react-icons/im';
 import 'react-slideshow-image/dist/styles.css'
 import './style.css'
-
-import PhoneLogo from '../../assets/images/logo/social/phone.png'
 
 export function RealEstateAds() {
     const ads = useSelector((state) => state.ads);
@@ -87,7 +85,9 @@ export function RealEstateAds() {
                             <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 font-bold">{data.home_price} €</p>
                         </div>
                         <div className="absolute right-1 bottom-1">
-                            <a href={"tel:" + phonenumber}><img className="w-4 h-4 md:w-6 md:h-6" src={PhoneLogo} alt={PhoneLogo} /></a>
+                            <a href={"tel:" + phonenumber}>
+                                <ImPhone className="text-myLightRed w-4 h-4 md:w-6 md:h-6"/>
+                            </a>
                         </div>
                     </div>
                 </div>
