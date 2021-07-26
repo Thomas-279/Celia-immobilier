@@ -11,13 +11,9 @@ export const ads = createSlice({
     name: 'realEstateAds',
     initialState: {
         realEstateAds: [],
-        showModal: false,
         status: null,
         },
         extraReducers: {
-            // setAdsData: state => {state.realEstateAds = data},
-            setShowModal: state => {state.showModal = true},
-            setCLoseModal: state => {state.showModal = false},
             [getAllAds.pending]: state => {state.status = "loading"},
             [getAllAds.fulfilled]: (state, {payload}) => {
                 state.realEstateAds = payload

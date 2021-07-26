@@ -33,7 +33,7 @@ export function Footer() {
         <p className="text-xs">RSAC : 123456789 Versailles</p>
         <p className="text-xs"><a href={bareme} target="_blank" rel="noreferrer">Barème Honoraires KW Trianon</a></p>
       </div>
-      <div className="fixed right-4 bottom-10 hidden md:block text-myLightRed">
+      <div className="fixed right-4 bottom-10 hidden md:block text-myLightRed animate-bounce">
           <FaArrowAltCircleUp
             onClick={scrollToTop}
             style={{ display: visible ? 'inline' : 'none' }}

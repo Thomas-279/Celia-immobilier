@@ -3,6 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllAds } from '../../redux/features/ads/ads'
 
+import { ImSpinner6 } from 'react-icons/im';
 import 'react-slideshow-image/dist/styles.css'
 import './style.css'
 
@@ -22,6 +23,16 @@ export function RealEstateAds() {
         infinite: true,
         indicators: true,
         arrows: true
+    }
+
+    if (ads.status === "loading") {
+        return (
+            <main className="w-full h-full fixed block top-0 left-0 bg-myWhite opacity-75 z-50">
+                <span className="text-myDarkRed opacity-75 top-1/2 my-0 mx-auto block relative w-0 h-0" style={{ top: "50%" }} >
+                    <ImSpinner6 className="animate-spin" />
+                </span>
+            </main>
+        )
     }
 
 
@@ -66,14 +77,14 @@ export function RealEstateAds() {
                     </div>
                     <div className="relative flex flex-col md:m-4 md:w-1/2">
                         <div className="h-4/6 w-full md:py-4 md:px-8">
-                            <p className="text-myLightRed my-2 text-xl md:text-3xl lg:text-5xl tracking-wide uppercase text-center border-b border-myLightRed leading-normal">{data.status}</p>
+                            <p className="text-myLightRed my-2 text-xl md:text-3xl lg:text-5xl tracking-wide uppercase text-center border-b border-myLightRed leading-normal">{data.home_status}</p>
                             <p className="text-center mb-2 uppercase text-xs md:text-lg lg:text-2xl">{data.home_location}</p>
                             <p className="text-left text-xs md:text-base">{data.home_type}</p>
                             <p className="text-left text-xs md:text-base">{data.home_size}</p>
                             <p className="text-left text-xs md:text-base">{data.description}</p> 
                         </div>
                         <div className="h-2/6 flex flex-col justify-end">
-                            <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 underline font-bold">{data.home_price} €</p>
+                            <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 font-bold">{data.home_price} €</p>
                         </div>
                         <div className="absolute right-1 bottom-1">
                             <a href={"tel:" + phonenumber}><img className="w-4 h-4 md:w-6 md:h-6" src={PhoneLogo} alt={PhoneLogo} /></a>
