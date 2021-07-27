@@ -1,7 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-// import data from '../../../data/data'
-
 export const getAllAds = createAsyncThunk('ads/getAllAds', async () => {
     const response = await fetch('https://celia-immobilier.herokuapp.com/ads')
     return await response.json()
