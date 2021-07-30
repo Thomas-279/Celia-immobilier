@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react'
 import { Slide } from 'react-slideshow-image';
 import { useSelector, useDispatch } from 'react-redux'
-import { getAllAds } from '../../redux/features/ads/ads'
+import { filteredData, getAllAds } from '../../redux/features/ads/ads'
 
 import { ImSpinner6, ImPhone } from 'react-icons/im';
 import 'react-slideshow-image/dist/styles.css'
 import './style.css'
 
 export function RealEstateAds() {
+    // recup les data des annonces
     const ads = useSelector((state) => state.ads);
+    
     const phonenumber = useSelector((state) => state.owner.phonenumber)
     const dispatch = useDispatch();
     useEffect(() => {
@@ -33,10 +35,28 @@ export function RealEstateAds() {
         )
     }
 
+    // ici fonction pour filtrer les biens en vente ( vendus ou non )
+    const handlefilter = (e) => {
+        const adsData = [...ads.realEstateAds]
+        if (e.target.checked) {
+            const forSaleData = adsData.filter((data) => {
+                return !data.sold
+                })
+                dispatch(filteredData(forSaleData))
+        } else {
+            dispatch(getAllAds())
+        }
+    };
+
 
     return (
     // le container
     <main className="w-full flex flex-col items-center bg-myLightGrey p-3 lg:p-10">
+        <div>
+            <label className="inline-flex items-center">
+                <input type="checkbox" className="form-checkbox h-5 w-5 text-myDarkRed" onChange={handlefilter} /><span className="ml-2 text-myDarkRed">Afficher uniquement les biens en vente</span>
+            </label>
+        </div>
     {/* elements */}
     {ads.realEstateAds.map((data) => (
         <section className="flex justify-center items-center h-full w-full xl:w-11/12" key={data.id}>
@@ -47,7 +67,14 @@ export function RealEstateAds() {
                             {/* Ici test de caroussel */}                        
                             <div className="containerSlide w-72 md:w-96">
                                 <Slide {...proprietes}>
-                                    <div className="each-slide">
+                                    {data.pics.map((pic) => (
+                                        <div className="each-slide" key={pic.id} >
+                                            <div className="flex justify-center">
+                                                <img className={"max-w-sm h-auto filter " + (data.sold ? 'grayscale' : '')} src={pic.url} alt={pic.url} />
+                                            </div>
+                                        </div>
+                                    ))}
+                                    {/* <div className="each-slide">
                                         <div className="flex justify-center">
                                             <img className={"max-w-sm h-auto filter " + (data.sold ? ' grayscale' : '')} src={data.pics[0].url} alt={data.pics[0].url} />
                                         </div>
@@ -66,7 +93,7 @@ export function RealEstateAds() {
                                         <div className="flex justify-center">
                                             <img className={"max-w-sm h-auto filter" + (data.sold ? ' grayscale' : '')} src={data.pics[3].url} alt={data.pics[3].url} />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </Slide>
                                 {(data.exclusivity ? <p className="text-center text-xs m-auto md:text-base mb:2 md:mb-4 w-5/6 text-myWhite bg-myLightRed">Exclusivité Keller Williams Trianon</p> : '')}
                             </div>

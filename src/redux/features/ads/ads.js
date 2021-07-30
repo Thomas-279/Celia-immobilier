@@ -11,10 +11,14 @@ export const ads = createSlice({
         realEstateAds: [],
         status: null,
         },
+        reducers: {
+            filteredData: (state, action) => {state.realEstateAds = action.payload},
+        },
         extraReducers: {
             [getAllAds.pending]: state => {state.status = "loading"},
             [getAllAds.fulfilled]: (state, {payload}) => {
-                state.realEstateAds = payload
+                // on en profite pour ranger les données reçues par id ( donc ancienneté )
+                state.realEstateAds = payload.sort((a,b) => b.id - a.id)
                 state.status = "success"
             },
             [getAllAds.rejected]: state => {state.status = "failed"}
@@ -22,6 +26,6 @@ export const ads = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setAdsData, setShowModal, setCLoseModal } = ads.actions
+export const { setAdsData, setShowModal, setCLoseModal, filteredData } = ads.actions
 
 export default ads.reducer
