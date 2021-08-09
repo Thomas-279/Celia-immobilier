@@ -41,7 +41,8 @@ export function Contact() {
         }
     return (
     // le container
-    <main className="w-full h-5/6 md:h-screen flex flex-col items-center bg-myLightGrey p-3 md:p-10">
+    // <main className="w-full h-5/6 md:h-screen flex flex-col items-center bg-myLightGrey p-3 md:p-10">
+    <main className="w-full flex flex-col items-center bg-myLightGrey p-3 md:p-10">
         {/* element form contact */}
         <section className="flex flex-col justify-center items-center h-full w-full md:w-11/12">
             <div className="w-full bg-myWhite shadow-xl p-2 md:p-5 my-2 md:m-5 rounded-2xl">
@@ -73,19 +74,19 @@ export function Contact() {
             <h2 className="block w-full text-center text-myLightRed text-base md:text-xl font-bold mb-6">Autres contacts :</h2>
                 <div className="flex justify-around w-full h-full">
                     <a href="https://www.facebook.com/celiadreuxkw" target="_blank" rel="noreferrer">
-                        <ImFacebook className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
+                        <ImFacebook className="hover:text-myLightRed w-6 md:w-10 h-6 md:h-10"/>
                     </a>
                     <a href="https://www.instagram.com/celiadreuxkw/" target="_blank" rel="noreferrer">
-                        <FiInstagram className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
+                        <FiInstagram className="hover:text-myLightRed w-6 md:w-10 h-6 md:h-10"/>
                     </a>
                     <a href="https://www.linkedin.com/in/c%C3%A9lia-dreux-71358a113/" target="_blank" rel="noreferrer">
-                        <ImLinkedin2 className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
+                        <ImLinkedin2 className="hover:text-myLightRed w-6 md:w-10 h-6 md:h-10"/>
                     </a>
                     <a href={"tel:" + phonenumber}>
-                        <ImPhone className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
+                        <ImPhone className="hover:text-myLightRed w-6 md:w-10 h-6 md:h-10"/>
                     </a>
                     <a href={"mailto:" + mail}>
-                        <FiMail className="hover:text-myLightRed w-6 md:w-12 h-6 md:h-12"/>
+                        <FiMail className="hover:text-myLightRed w-6 md:w-10 h-6 md:h-10"/>
                     </a>
                 </div>
             </div>

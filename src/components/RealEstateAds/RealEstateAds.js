@@ -60,7 +60,7 @@ export function RealEstateAds() {
     {/* elements */}
     {ads.realEstateAds.map((data) => (
         <section className="flex justify-center items-center h-full w-full xl:w-11/12" key={data.id}>
-            <div className={"w-full md:h-96 p-2 md:p-5 my-2 md:m-5 shadow-xl rounded-2xl" + (data.sold ? ' bg-myLessLightGrey' : ' bg-myWhite')}>
+            <div className={"w-full md:h-96 p-2 md:p-5 my-2 md:my-5 shadow-xl rounded-2xl" + (data.sold ? ' bg-myLessLightGrey' : ' bg-myWhite')}>
                 <div className="flex flex-col md:flex-row w-full h-full">
                     <div className={"md:w-1/2 flex " + (data.sold ? ' bg-myLessLightGrey' : 'bg-myWhite')}>
                         <div className="w-full flex justify-center">
