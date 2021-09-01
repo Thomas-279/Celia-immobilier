@@ -11,6 +11,7 @@ import { Home } from '../Home/Home'
 import { Services } from '../Services/Services'
 import { Contact } from '../Contact/Contact'
 import { RealEstateAds } from '../RealEstateAds/RealEstateAds'
+import { SingleAd } from '../SingleAd/SingleAd'
 import { Footer } from '../Footer/Footer'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route exact path='/services' component={Services} />
       <Route exact path='/realestateads' component={RealEstateAds}/>
       <Route exact path='/contact' component={Contact} />
+      <Route path='/realestateads/:id' component={SingleAd} />
     </Switch>
     <Footer />
   </div>

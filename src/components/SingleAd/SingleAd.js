@@ -1,29 +1,27 @@
 import React, { useEffect } from 'react'
-import { Slide } from 'react-slideshow-image';
 import { useSelector, useDispatch } from 'react-redux'
-import { filteredData, getAllAds } from '../../redux/features/ads/ads'
+import { useParams } from 'react-router-dom';
+import { getAllAds } from '../../redux/features/ads/ads'
 
 import { ImSpinner6, ImPhone } from 'react-icons/im';
 import 'react-slideshow-image/dist/styles.css'
-import './style.css'
 
-export function RealEstateAds() {
+export function SingleAd() {
     // recup les data des annonces
     const ads = useSelector((state) => state.ads);
-    
+
     const phonenumber = useSelector((state) => state.owner.phonenumber)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllAds());
     }, [dispatch]);
 
-    const proprietes = {
-        duration: 5000,
-        transitionDuration: 500,
-        infinite: true,
-        indicators: true,
-        arrows: true
-    }
+
+    const { id } = useParams();
+
+    const filteredOneAd = ads.realEstateAds.filter(ad => {
+        return ad.id.toString() === id.toString()
+        })
 
     if (ads.status === "loading") {
         return (
@@ -35,46 +33,25 @@ export function RealEstateAds() {
         )
     }
 
-    // ici fonction pour filtrer les biens en vente ( vendus ou non )
-    const handlefilter = (e) => {
-        const adsData = [...ads.realEstateAds]
-        if (e.target.checked) {
-            const forSaleData = adsData.filter((data) => {
-                return !data.sold
-                })
-                dispatch(filteredData(forSaleData))
-        } else {
-            dispatch(getAllAds())
-        }
-    };
-
-
     return (
     // le container
     <main className="w-full flex flex-col items-center bg-myLightGrey p-3 lg:p-10">
-        <div>
-            <label className="inline-flex items-center">
-                <input type="checkbox" className="form-checkbox h-5 w-5 text-myDarkRed" onChange={handlefilter} /><span className="ml-2 text-myDarkRed">Afficher uniquement les biens en vente</span>
-            </label>
-        </div>
     {/* elements */}
-    {ads.realEstateAds.map((data) => (
+    {filteredOneAd.map((data) => (
         <section className="flex justify-center items-center h-full w-full xl:w-11/12" key={data.id}>
-            <div className={"w-full md:h-96 p-2 md:p-5 my-2 md:my-5 shadow-xl rounded-2xl" + (data.sold ? ' bg-myLessLightGrey' : ' bg-myWhite')}>
+            <div className={"w-full p-2 md:p-5 my-2 md:my-5 shadow-xl rounded-2xl" + (data.sold ? ' bg-myLessLightGrey' : ' bg-myWhite')}>
                 <div className="flex flex-col md:flex-row w-full h-full">
                     <div className={"md:w-1/2 flex " + (data.sold ? ' bg-myLessLightGrey' : 'bg-myWhite')}>
                         <div className="w-full flex justify-center">
                             {/* Ici test de caroussel */}                        
                             <div className="containerSlide w-72 md:w-96">
-                                <Slide {...proprietes}>
-                                    {data.pics.map((pic) => (
+                                {data.pics.map((pic) => (
                                         <div className="each-slide" key={pic.id} >
                                             <div className="flex justify-center">
-                                                <img className={"max-w-sm h-auto filter " + (data.sold ? 'grayscale' : '')} src={pic.url} alt={pic.url} />
+                                                <img className={"mb-5 max-w-sm h-auto filter " + (data.sold ? 'grayscale' : '')} src={pic.url} alt={pic.url} />
                                             </div>
                                         </div>
                                     ))}
-                                </Slide>
                                 {(data.exclusivity ? <p className="text-center text-xs m-auto md:text-base mb:2 md:mb-4 w-5/6 text-myWhite bg-myLightRed">Exclusivité Keller Williams Trianon</p> : '')}
                             </div>
                             {/* Ici test de caroussel */}
@@ -90,7 +67,6 @@ export function RealEstateAds() {
                         </div>
                         <div className="h-2/6 flex flex-col justify-end">
                             <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 font-bold">{`${data.home_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`} €</p>
-                            <a href={`/realestateads/${data.id}`} className="text-center text-xs md:text-sm" >Plus d'informations</a>
                         </div>
                         <div className="absolute right-1 bottom-1">
                             <a href={"tel:" + phonenumber}>

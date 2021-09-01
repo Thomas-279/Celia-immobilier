@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setVisibility } from '../../redux/features/owner/owner'
+// import MessengerCustomerChat from 'react-messenger-customer-chat'
 
 import { FaArrowAltCircleUp } from 'react-icons/fa';
 
@@ -33,13 +34,14 @@ export function Footer() {
         <p className="text-xs">RSAC : 123456789 Versailles</p>
         <p className="text-xs"><a href={bareme} target="_blank" rel="noreferrer">Barème Honoraires KW Trianon</a></p>
       </div>
-      <div className="fixed right-4 bottom-10 hidden md:block text-myLightRed animate-bounce">
+      <div className="fixed left-4 bottom-10 hidden md:block text-myLightRed animate-bounce">
           <FaArrowAltCircleUp
             onClick={scrollToTop}
             style={{ display: visible ? 'inline' : 'none' }}
             name="Back to top"
           />
       </div>
+      {/* <MessengerCustomerChat pageId="3318599168158842" appId="1753371008384617" /> */}
     </footer>
   )
 }

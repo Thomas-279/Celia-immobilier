@@ -34,8 +34,8 @@ export function Home() {
                         <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 md:py-1 hover:underline"><a href={"mailto:" + mail}>{mail}</a></p>
                         <p className="text-center text-xs md:text-lg lg:text-2xl px-2 md:px-8 md:py-1 hover:underline"><a href={"tel:" + phonenumber} >{phonenumber}</a></p>
                     </div>
-                    <div className="w-1/2 h-full flex bg-myWhite">
-                        <div className="w-full h-full flex justify-center">
+                    <div className="w-1/2 h-full flex bg-myWhite justify-center">
+                        <div className="w-full md:w-1/2 h-full flex justify-center">
                             <img src={Owner} alt={Owner} className="w-3/4 md:w-full object-contain md:object-scale-down" />
                         </div>
                     </div>

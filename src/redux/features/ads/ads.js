@@ -21,7 +21,7 @@ export const ads = createSlice({
                 state.realEstateAds = payload.sort((a,b) => b.id - a.id)
                 state.status = "success"
             },
-            [getAllAds.rejected]: state => {state.status = "failed"}
+            [getAllAds.rejected]: state => {state.status = "failed"},
         }
 })
 
