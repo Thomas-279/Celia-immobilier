@@ -9,20 +9,20 @@ import 'react-slideshow-image/dist/styles.css'
 export function SingleAd() {
     // recup les data des annonces
     const ads = useSelector((state) => state.ads);
-
+    // recup des infos telephone
     const phonenumber = useSelector((state) => state.owner.phonenumber)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllAds());
     }, [dispatch]);
 
-
+    // recup de l'id selectionné dans l'url
     const { id } = useParams();
-
+    // filtre des datas pour matcher avec l'id
     const filteredOneAd = ads.realEstateAds.filter(ad => {
         return ad.id.toString() === id.toString()
         })
-
+    // loading
     if (ads.status === "loading") {
         return (
             <main className="w-full h-full fixed block top-0 left-0 bg-myWhite opacity-75 z-50">
