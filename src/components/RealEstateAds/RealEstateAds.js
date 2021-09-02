@@ -90,7 +90,7 @@ export function RealEstateAds() {
                         </div>
                         <div className="h-2/6 flex flex-col justify-end">
                             <p className="text-center text-lg md:text-2xl lg:text-3xl px-8 font-bold">{`${data.home_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`} €</p>
-                            <a href={`/realestateads/${data.id}`} className="text-center text-xs md:text-sm" >Plus d'informations</a>
+                            {/* <a href={`/realestateads/${data.id}`} className="text-center text-xs md:text-sm" >Plus d'informations</a> */}
                         </div>
                         <div className="absolute right-1 bottom-1">
                             <a href={"tel:" + phonenumber}>
